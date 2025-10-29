@@ -13,31 +13,96 @@ body, html {
     box-sizing: border-box;
     background: #EEEEEE;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 #main-content {
-    margin-top:0;
-    padding:0;
+    display:none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 250px; /* Match sidebar width */
+    width: calc(100% - 250px);
     animation: fadeIn 1s forwards;
 }
 #intro-container{
     background: url("../Media/Kimo\'s-overview.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: blur(5px);
     background-position: center;
-    background-color: rgba(255, 253, 253, 0.223); /* adds a semi-transparent tone */
-    background-blend-mode: overlay; /* or try: multiply, darken, lighten */
-    height:70vh;
-    /* center content vertically and horizontally */
+    background-color: rgba(255, 253, 253, 0.223);
+    background-blend-mode: overlay;
+    height: 60vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* vertical centering */
-    align-items: center;     /* horizontal centering */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     gap: 0.5rem;
-    padding: 1rem; /* small inset so rounded backgrounds don't touch edges */
 }
-/*Intro container
+.sidebar {
+    background-color: rgba(47, 79, 79, 0.95);
+    color: #F7F6F0;
+    width: 250px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60vh;
+    z-index: 1000;
+    overflow-y: auto;
+    margin: 0;
+    border: none;
+}
+
+.sidebar h2 {
+    color: #A3B18A;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 4rem 0;
+}
+
+.sidebar a {
+    color: #F7F6F0;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s ease-in-out;
+}
+
+.sidebar a:hover {
+    color: #C2B280; /* Golden beige hover */
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+    }
+
+    #main-content {
+        left: 0;
+        width: 100%;
+    }
+
+    #intro-container {
+        height: calc(100vh - 60px);
+        flex-direction: column;
+    }
+}
+/*Intro container*/
 #intro {
     position: fixed;
     top: 0;
@@ -51,7 +116,7 @@ body, html {
     animation: fadeIn 1.5s forwards;
 }
 
-    /* Fade in and fade out keyframes
+    /* Fade in and fade out keyframes */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -70,10 +135,10 @@ body, html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}*/
+}
 #intro-container h1{
     margin: 0; /* reset margin so flex centering works cleanly */
-    color: #fff; /* white provides reliable contrast over photos */
+    color: var(--cream); /* white provides reliable contrast over photos */
     /* subtle translucent dark backdrop to ensure readability on busy images */
     background: rgba(0, 0, 0, 0.45);
     display: inline-block;
@@ -90,7 +155,7 @@ body, html {
 /* ensure h2 inside the intro container matches and centers under the h1 */
 #intro-container h2{
     margin: 0.5rem 0 0 0;
-    color: #fff;
+    color: var(--cream);
     background: rgba(0, 0, 0, 0.32);
     display: inline-block;
     padding: 0.35rem 0.7rem;
