@@ -1,4 +1,4 @@
-const intro = document.getElementById('intro');
+/*const intro = document.getElementById('intro');
     const main = document.getElementById('main-content');
     const video = document.getElementById('intro-video');
 
@@ -8,4 +8,4 @@ const intro = document.getElementById('intro');
         intro.style.display = 'none';
         main.style.display = 'block';
       }, 1000); // Matches fadeOut duration
-    };
+    };*/
