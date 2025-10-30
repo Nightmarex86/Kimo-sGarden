@@ -10,7 +10,7 @@
 body{
     margin:0;
     padding:0;
-    background:linear-gradient(var(--forest),var(--herb));
+    
     height:95vh;    
     font-family: Arial, sans-serif;
     text-align: center;
@@ -76,23 +76,6 @@ body{
         min-height: auto;
     }
 }
-#About-container{
-    margin:50px 700px;
-    padding: 20px;
-    border-radius: 12px;
-    background-color: var(--cream);
-    width:600px;
-    height:80vh;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
-}
-#About-container p {
-    margin: 0;
-    padding: 0;
-    line-height: 4.0;
-    font-weight: bold;
-    color: var(--forest);
-}
-
 .whatsapp-float {
     position: fixed;
     width: 60px;
