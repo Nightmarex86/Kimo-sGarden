@@ -10,8 +10,8 @@
 body{
     margin:0;
     padding:0;
-    
-    height:95vh;    
+    background: linear-gradient(var(--forest), var(--olive));
+    height:110vh;    
     font-family: Arial, sans-serif;
     text-align: center;
 }
@@ -76,6 +76,117 @@ body{
         min-height: auto;
     }
 }
+/* Menu grid: 4 columns on desktop, responsive down to 2 and 1 */
+#Menu-container {
+    margin-left: 270px; /* Space for the sidebar (sidebar width + gap) */
+    padding: 2rem;
+    text-align: left;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    align-items: start;
+}
+
+/* Make rows consistent and allow items to stretch evenly */
+#Menu-container{
+    grid-auto-rows: minmax(160px, auto);
+}
+#Menu-container h2{
+    text-align: center;
+    color: var(--cream);
+    background: rgba(0, 0, 0, 0.32);
+
+}
+.menu-item {
+    background: rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 1.25rem;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column; /* stack heading and description */
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--cream);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+.menu-item h3 {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+/* Description paragraph inside menu item */
+.menu-item p{
+    margin: 0;
+    color: rgba(247,246,240,0.9);
+    font-size: 0.95rem;
+    line-height: 1.35;
+    text-align: center;
+    max-width: 90%;
+    opacity: 0.95;
+}
+
+/* Smaller helper text variant */
+.menu-item p{
+    font-size: 1rem;
+    color: rgba(247,246,240,0.8);
+}
+.menu-item img {
+    max-width: 50%;
+    border-radius: 8px;
+}
+/* Ensure the section heading spans the full width of the grid and stays above the items */
+#Menu-container h2{
+    grid-column: 1 / -1;
+    padding: 0.5rem 0;
+    margin: auto;
+    width:300px;
+    text-align: center;
+    color: var(--cream);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.32);
+    font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+}
+.menu-button{
+    background: var(--olive);
+    color: var(--cream);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.menu-button:hover{
+    background: var(--forest);
+}
+/* Responsive breakpoints for the menu grid */
+@media (max-width: 1024px) {
+    #Menu-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 270px; /* keep sidebar visible on tablet */
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Sidebar becomes part of the flow on small screens */
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    #Menu-container {
+        grid-template-columns: 1fr;
+        margin-left: 0; /* remove desktop offset */
+        padding: 1rem;
+    }
+}
+
 .whatsapp-float {
     position: fixed;
     width: 60px;
