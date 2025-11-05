@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgers</title>
+    <link rel="icon" type="image/png" href="../Media/Kimo'sGarden-Logo.png">
+    <link rel="stylesheet" href="../CSS/StyleBurgers.css">
+</head>
+<body>
+    <a href="../HTML/Menu.html" class="back-button">← Back to Menu</a>
+    <h1>Burgers</h1>
+    <div id="Menu-container">
+        <div class="menu-item">
+            <h2>Classic Beef Burger</h2>
+            <p>A delicious classic beef burger with iceberg, pickle, tomato, and cocktail sauce.</p>
+            <p>Price: $5</p>
+        </div>
+        <div class="menu-item">
+            <h2>Classic Chicken Burger</h2>
+            <p>A classic chicken burger grilled or fried with iceberg, pickle, mayo sauce, and cocktail sauce.</p>
+            <p>Price: $4</p>
+        </div>
+        <div class="menu-item">
+            <h2>Classic Cheese Beef Burger</h2>
+            <p>A classic beef burger with cheddar slice, iceberg, pickle, tomato, and cocktail sauce.</p>
+            <p>Price: $5.50</p>
+        </div>
+        <div class="menu-item">
+            <h2>Classic Cheese Chicken Burger</h2>
+            <p>A classic chicken burger grilled or fried with a slice of cheese, iceberg, pickle, mayo sauce, and tomato.</p>
+            <p>Price: $4.50</p>
+        </div>
+        <div class="menu-item">
+            <h2>Mozzarella Beef Burger</h2>
+            <p>A classic beef burger with a mozzarella patty, iceberg, cheddar, and pickle.</p>
+            <p>Price: $8</p>
+        </div>
+        <div class="menu-item">
+            <h2>Mozzarella Chicken Burger</h2>
+            <p>A classic chicken burger with a mozzarella patty, iceberg, mayo, pickle, and tomato.</p>
+            <p>Price: $7</p>
+        </div>
+        <div class="menu-item">
+            <h2>BBQ Beef Burger</h2>
+            <p>A classic beef burger with BBQ sauce, iceberg, and mozzarella patty.</p>
+            <p>Price: $8</p>
+        </div>
+        <div class="menu-item">
+            <h2>BBQ Chicken Burger</h2>
+            <p>A fried chicken burger with BBQ sauce, iceberg, and mozzarella patty.</p>
+            <p>Price: $7</p>
+        </div>
+        <div class="menu-item">
+            <h2>Kimo's Tasty Burger</h2>
+            <p>A delicious beef burger with iceberg, pickle, tomato, and Kimo's special sauce.</p>
+            <p>Price: $5</p>
+        </div>
+    </div>
+    <a href="https://wa.me/961XXXXXXXX" class="whatsapp-float" target="_blank">
+            <img src="../Media/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', e => {
+            if (link.href.includes('#') || link.target === '_blank') return;
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+            window.location = link.href;
+            }, 400);
+        });
+        });
+    </script>
+</body>
+</html>

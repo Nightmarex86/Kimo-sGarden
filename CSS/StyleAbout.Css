@@ -11,9 +11,13 @@ body{
     margin:0;
     padding:0;
     background:linear-gradient(var(--forest),var(--herb));
-    height:95vh;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:95vh;
     font-family: Arial, sans-serif;
     text-align: center;
+    opacity: 0;
+    animation: fadeInAnimation 0.8s ease forwards;
 }
 .sidebar {
     background-color: rgba(47, 79, 79, 0.95);
@@ -21,8 +25,8 @@ body{
     width: 250px;
     padding: 1.5rem;
     box-sizing: border-box;
-    position: fixed;
-    top: 0;
+    position: fixed !important;
+    top: -50px;
     left: 0;
     height: 100vh;
     z-index: 1000;
@@ -67,7 +71,28 @@ body{
 .sidebar a:hover {
     color: #C2B280; /* Golden beige hover */
 }
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-out {
+  animation: fadeOutAnimation 0.4s ease forwards;
+}
 
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 @media (max-width: 768px) {
     .sidebar {
         position: relative;
@@ -78,7 +103,7 @@ body{
 }
 #About-container{
     margin:50px 700px;
-    padding: 20px;
+    padding: 2rem;
     border-radius: 12px;
     background-color: var(--cream);
     width:600px;

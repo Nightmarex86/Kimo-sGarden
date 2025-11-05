@@ -9,5 +9,58 @@
 </head>
 <body>
     <a href="../HTML/Menu.html" class="back-button">← Back to Menu</a>
+    <h1>Appetizers</h1>
+    <div id="Menu-container">
+        <div class="menu-item">
+            <h3>French Fries</h3>
+            <p>Golden fries served with a side of ketchup.</p>
+            <p>Price: $4</p>
+        </div>
+        <div class="menu-item">
+            <h3>Curly Fries</h3>
+            <p>Crispy curly fries, served with cocktail sauce.</p>
+            <p>Price: $6</p>
+        </div>
+        <div class="menu-item">
+            <h3>Mozzarella Sticks</h3>
+            <p>4Pc golden mozzarella sticks served with cocktail sauce.</p>
+            <p>Price: $4</p>
+        </div>
+        <div class="menu-item">
+            <h3>Fries and Cheddar</h3>
+            <p>Golden fries topped with melted cheddar cheese.</p>
+            <p>Price: $5.50</p>
+        </div>
+        <div class="menu-item">
+            <h3>Fries and Cheese</h3>
+            <p>Golden fries topped with melted cheese.</p>
+            <p>Price: $6</p>
+        </div>
+        <div class="menu-item">
+            <h3>Dirty Chicken Fries</h3>
+            <p>Golden fries topped with crispy chicken tenders, BBQ sauce, cheddar and cocktail sauce.</p>
+            <p>Price: $8</p>
+        </div>
+        <div class="menu-item">
+            <h3>Nachos</h3>
+            <p>Crispy tortilla chips topped with mozzarella,served with cheddar sauce on the side.</p>
+            <p>Price: $4</p>
+        </div>
+    </div>
+    <a href="https://wa.me/961XXXXXXXX" class="whatsapp-float" target="_blank">
+            <img src="../Media/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', e => {
+            if (link.href.includes('#') || link.target === '_blank') return;
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+            window.location = link.href;
+            }, 400);
+        });
+        });
+    </script>
 </body>
 </html>

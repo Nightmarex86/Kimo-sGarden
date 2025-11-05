@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salads</title>
+    <link rel="icon" type="image/png" href="../Media/Kimo'sGarden-Logo.png">
+    <link rel="stylesheet" href="../CSS/StyleSalads.css">
+</head>
+<body>
+    <a href="../HTML/Menu.html" class="back-button">← Back to Menu</a>
+    <h1>Salads</h1>
+    <div id="Menu-container">
+        <div class="menu-item">
+            <h2>Chicken Caesar Salad</h2>
+            <p>Iceberg, grilled chicken, cucumber, parmesan cheese, croutons, and mayo dressing</p>
+            <p>Price: $8</p>
+        </div>
+        <div class="menu-item">
+            <h2>Crab Salad</h2>
+            <p>Crab, iceberg, corn, carrots, tomato cerise, cucumber, mustard dressing</p>
+            <p>Price: $8</p>
+        </div>
+        <div class="menu-item">
+            <h2>Fatoush Salad</h2>
+            <p>A colorful salad with mixed greens, tomatoes, cucumbers, radishes, and a tangy sumac dressing.</p>
+            <p>Price: $7</p>
+        </div>
+    </div>
+    <a href="https://wa.me/961XXXXXXXX" class="whatsapp-float" target="_blank">
+            <img src="../Media/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', e => {
+            if (link.href.includes('#') || link.target === '_blank') return;
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+            window.location = link.href;
+            }, 400);
+        });
+        });
+    </script>
+</body>
+</html>

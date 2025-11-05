@@ -11,18 +11,42 @@
 body{
     margin: 0;
     padding: 0;
-    background: linear-gradient(var(--forest), var(--herb));
+    background: var(--forest);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 90vh;
     font-family: Arial, sans-serif;
+    opacity: 0;
+    animation: fadeInAnimation 0.8s ease forwards;
+}
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-out {
+  animation: fadeOutAnimation 0.4s ease forwards;
+}
+
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 .back-button {
     position: absolute;
     top: 20px;
     left: 20px;
     background-color: rgba(47, 79, 79, 0.9); /* deep forest green */
-    color: #F7F6F0; /* cream text */
+    color: var(--cream); /* cream text */
     padding: 10px 18px;
     border-radius: 8px;
     text-decoration: none;
@@ -33,6 +57,90 @@ body{
 }
 
 .back-button:hover {
-    background-color: #A3B18A; /* olive hover */
+    background-color: var(--olive); /* olive hover */
     transform: translateY(-2px);
+}
+
+h1{
+    color: var(--cream);
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+}
+#Menu-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.menu-item{
+    background-color: var(--cream);
+    border-radius: 12px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid var(--olive);
+}
+
+.menu-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item h3 {
+    color: var(--forest);
+    margin-top: 0;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--herb);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.menu-item p {
+    color: var(--wine);
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+.menu-item p:last-child {
+    color: var(--terracotta);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+    border: rgba(37, 211, 102, 0.5) solid 2px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-icon {
+    width: 50px;
+    height: 50px;
 }

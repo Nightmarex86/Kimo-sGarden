@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandwiches</title>
+    <link rel="icon" type="image/x-icon" href="../Media/Kimo'sGarden-Logo.png">
+    <link rel="stylesheet" href="../CSS/StyleSandwiches.css">
+</head>
+<body>
+    <a href="../HTML/Menu.html" class="back-button">← Back to Menu</a>
+    <h1>Sandwiches</h1>
+    <div id="Menu-container">
+        <div class="menu-item">
+            <h3>Fajita Sandwich</h3>
+            <p>Sub bread, marinated grilled chicken breast, green peppers, onions, mozzarella cheese, and cocktail sauce</p>
+            <p>Price: $6</p>
+        </div>
+        <div class="menu-item">
+            <h3>Crispy Sandwich</h3>
+            <p>Sub bread, fried crispy chicken, BBQ sauce, cheddar, mozzarella cheese, pickle, and corn</p>
+            <p>Price: $6</p>
+        </div>
+        <div class="menu-item">
+            <h3>Francisco Sandwich</h3>
+            <p>Sub bread, grilled chicken, mozzarella cheese, soya sauce, mayo, corn, and pickle</p>
+            <p>Price: $5</p>
+        </div>
+        <div class="menu-item">
+            <h3>Chicken Cheddar Sandwich</h3>
+            <p>Sub bread, grilled chicken, cheddar, mozzarella cheese, iceberg, pickle, and tomato</p>
+            <p>Price: $5</p>
+        </div>
+        <div class="menu-item">
+            <h3>Philadelphia Sandwich</h3>
+            <p>Sub bread, marinated meat, green pepper, onions, mozzarella cheese, cream cheese, and mayo sauce</p>
+            <p>Price: $8.50</p>
+        </div>
+        <div class="menu-item">
+            <h3>Tawouk Sandwich</h3>
+            <p>Arabic bread, grilled chicken, coleslaw, garlic sauce, and pickles, and fries</p>
+            <p>Price: $4</p>
+        </div>
+        <div class="menu-item">
+            <h3>Makanek Sandwich</h3>
+            <p>Arabic bread, grilled Makanek sausage, mayo sauce, tomato, and pickles</p>
+            <p>Price: $4</p>
+        </div>
+        <div class="menu-item">
+            <h3>Soujouk Sandwich</h3>
+            <p>Arabic bread, grilled soujouk, mayo sauce, garlic sauce, tomato, and pickles</p>
+            <p>Price: $4</p>
+        </div>
+        <div class="menu-item">
+            <h3>Fries Sandwich</h3>
+            <p>Arabic bread, Fries, coleslaw, ketchup, and pickles</p>
+            <p>Price: $3.50</p>
+        </div>
+    </div>
+    <a href="https://wa.me/961XXXXXXXX" class="whatsapp-float" target="_blank">
+            <img src="../Media/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', e => {
+            if (link.href.includes('#') || link.target === '_blank') return;
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+            window.location = link.href;
+            }, 400);
+        });
+        });
+    </script>
+</body>
+</html>
