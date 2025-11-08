@@ -13,7 +13,7 @@ body{
     background: var(--forest);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90vh;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     opacity: 0;
     animation: fadeInAnimation 0.8s ease forwards;
@@ -66,52 +66,109 @@ h1{
     text-transform: uppercase;
     letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
 
-}
-#Menu-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.menu-item{
+.menu-item {
     background-color: var(--cream);
-    border-radius: 12px;
-    padding: 20px 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    width: 450px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 2px solid var(--olive);
+    padding: 12px 2px;
+    margin-bottom:8px;
+    border-radius: 4px;
+    border-bottom: 1px solid var(--herb);
 }
 
-.menu-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+.menu-item:last-child {
+    border-bottom: none;
 }
 
-.menu-item h3 {
+.menu-item h2, .menu-item h3 {
     color: var(--forest);
-    margin-top: 0;
-    font-size: 1.4rem;
-    border-bottom: 2px solid var(--herb);
-    padding-bottom: 8px;
-    margin-bottom: 12px;
+    margin: 0;
+    font-size: 1.1rem;
+    padding-bottom: 4px;
 }
 
 .menu-item p {
-    color: var(--wine);
-    margin: 8px 0;
-    font-size: 1.1rem;
+    color: var(--terracotta);
+    margin: 4px 0 0 0;
+    font-size: 1rem;
 }
 
-.menu-item p:last-child {
+.menu-item p:not([class="price"]) {
+    color: var(--wine);
+    font-style: italic;
+    margin-bottom: 4px;
+}
+
+/* Two-column beverage layout */
+.beverage-layout {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 30px;
+}
+
+.beverage-column {
+    flex: 1;
+    max-width: 600px;
+}
+
+.beverage-column .section-title {
+    color: var(--forest);
+    font-size: 1.3rem;
+    margin: 0 0 20px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--herb);
+}
+
+.column-note {
     color: var(--terracotta);
-    font-weight: bold;
-    margin-top: 15px;
+    margin: 15px 0 0 0;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+@media (max-width: 1024px) {
+    .beverage-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 600px;
+    }
+
+    .beverage-column {
+        width: 100%;
+    }
+
+    .beverage-column .section-title {
+        font-size: 1.3rem;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .beverage-layout {
+        margin: 20px auto;
+        padding: 0 15px;
+        gap: 20px;
+    }
+
+    .menu-item {
+        padding: 20px;
+    }
+
+    .menu-item h2, .menu-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .menu-item p {
+        font-size: 1rem;
+    }
+
+    .column-note {
+        font-size: 1.1rem;
+        padding: 10px 15px;
+    }
 }
 
 .whatsapp-float {

@@ -98,3 +98,69 @@ h1{
     width: 50px;
     height: 50px;
 }
+
+/* Extras grid: three columns on wide screens, responsive to 2/1 columns */
+.extras-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px 40px 20px;
+  align-items: start;
+}
+
+.extra-card {
+  background: var(--cream);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  border: 2px solid rgba(112,130,56,0.15);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.extra-card h2 {
+  margin-top: 0;
+  color: var(--forest);
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--herb);
+  padding-bottom: 8px;
+}
+
+.extra-card p, .extra-card li {
+  color: var(--wine);
+  line-height: 1.4;
+  margin: 8px 0;
+}
+
+.extra-card .card-cta {
+  display: inline-block;
+  margin-top: 12px;
+  background: var(--olive);
+  color: var(--cream);
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.extra-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+}
+
+.extra-card .small {
+  font-size: 0.9rem;
+  color: var(--terracotta);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .extras-grid { grid-template-columns: repeat(2, 1fr); max-width: 900px; }
+}
+
+@media (max-width: 620px) {
+  .extras-grid { grid-template-columns: 1fr; padding: 0 12px 30px 12px; }
+  .extra-card { padding: 16px; }
+}
