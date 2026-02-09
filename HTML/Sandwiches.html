@@ -3,74 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandwiches</title>
-    <link rel="icon" type="image/x-icon" href="../Media/Kimo'sGarden-Logo.png">
+    <title>Sandwiches - Kimo's Garden Restaurant</title>
+    <link rel="icon" type="image/png" href="../Media/Kimo'sGarden-Logo.png">
     <link rel="stylesheet" href="../CSS/StyleSandwiches.css">
 </head>
 <body>
-    <a href="../HTML/Menu.html" class="back-button">← Back to Menu</a>
-    <h1>Sandwiches</h1>
-    <div id="Menu-container">
-        <div class="menu-item">
-            <h3>Fajita Sandwich</h3>
-            <p>Sub bread, marinated grilled chicken breast, green peppers, onions, mozzarella cheese, and cocktail sauce</p>
-            <p>Price: $6</p>
+    <header class="header">
+        <div class="header-top">
+            <h1 class="logo"><a href="../index.html">Kimo's Garden</a></h1>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="menu-item">
-            <h3>Crispy Sandwich</h3>
-            <p>Sub bread, fried crispy chicken, BBQ sauce, cheddar, mozzarella cheese, pickle, and corn</p>
-            <p>Price: $6</p>
-        </div>
-        <div class="menu-item">
-            <h3>Francisco Sandwich</h3>
-            <p>Sub bread, grilled chicken, mozzarella cheese, soya sauce, mayo, corn, and pickle</p>
-            <p>Price: $5</p>
-        </div>
-        <div class="menu-item">
-            <h3>Chicken Cheddar Sandwich</h3>
-            <p>Sub bread, grilled chicken, cheddar, mozzarella cheese, iceberg, pickle, and tomato</p>
-            <p>Price: $5</p>
-        </div>
-        <div class="menu-item">
-            <h3>Philadelphia Sandwich</h3>
-            <p>Sub bread, marinated meat, green pepper, onions, mozzarella cheese, cream cheese, and mayo sauce</p>
-            <p>Price: $8.50</p>
-        </div>
-        <div class="menu-item">
-            <h3>Tawouk Sandwich</h3>
-            <p>Arabic bread, grilled chicken, coleslaw, garlic sauce, and pickles, and fries</p>
-            <p>Price: $4</p>
-        </div>
-        <div class="menu-item">
-            <h3>Makanek Sandwich</h3>
-            <p>Arabic bread, grilled Makanek sausage, mayo sauce, tomato, and pickles</p>
-            <p>Price: $4</p>
-        </div>
-        <div class="menu-item">
-            <h3>Soujouk Sandwich</h3>
-            <p>Arabic bread, grilled soujouk, mayo sauce, garlic sauce, tomato, and pickles</p>
-            <p>Price: $4</p>
-        </div>
-        <div class="menu-item">
-            <h3>Fries Sandwich</h3>
-            <p>Arabic bread, Fries, coleslaw, ketchup, and pickles</p>
-            <p>Price: $3.50</p>
-        </div>
-    </div>
-    <a href="https://wa.me/961XXXXXXXX" class="whatsapp-float" target="_blank">
-            <img src="../Media/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+        <nav class="navbar" id="navbar" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../HTML/Menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="../HTML/About.html" class="nav-link">About</a></li>
+                <li><a href="../HTML/Contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="category-header">
+            <a href="../HTML/Menu.html" class="back-link">&larr; Back to Menu</a>
+            <h2>Sandwiches</h2>
+            <p class="category-description">Hearty sandwiches made with artisanal bread</p>
+        </section>
+
+        <section id="menu-container" class="menu-grid">
+            <article class="menu-item">
+                <h3>Chicken Sandwich</h3>
+                <p>Grilled chicken breast with lettuce, tomato, and our house sauce.</p>
+                <p class="price">$7</p>
+            </article>
+            <article class="menu-item">
+                <h3>Turkey Sandwich</h3>
+                <p>Sliced turkey with Swiss cheese, avocado, and sprouts.</p>
+                <p class="price">$8</p>
+            </article>
+            <article class="menu-item">
+                <h3>Veggie Sandwich</h3>
+                <p>Roasted vegetables with hummus and fresh herbs on whole wheat bread.</p>
+                <p class="price">$7</p>
+            </article>
+        </section>
+    </main>
+
+    <a href="https://wa.me/96171804331?text=Hello%2C%20please%20I%20would%20like%20to%20order." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Order via WhatsApp"
+       aria-label="Order via WhatsApp">
+        <img src="../Media/whatsapp-icon.png" alt="WhatsApp icon">
     </a>
-    <script>
-        document.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', e => {
-            if (link.href.includes('#') || link.target === '_blank') return;
-            e.preventDefault();
-            document.body.classList.add('fade-out');
-            setTimeout(() => {
-            window.location = link.href;
-            }, 400);
-        });
-        });
-    </script>
+
+    <script src="../JS/NavigationScript.js"></script>
 </body>
 </html>

@@ -3,86 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beverages</title>
-    <link rel="icon" type="image/x-icon" href="../Media/Kimo'sGarden-Logo.png">
+    <title>Beverages - Kimo's Garden Restaurant</title>
+    <link rel="icon" type="image/png" href="../Media/Kimo'sGarden-Logo.png">
     <link rel="stylesheet" href="../CSS/StyleBeverages.css">
 </head>
 <body>
-    <a href="../HTML/Menu.html" class="back-button">← Back to Menu</a>
-    <h1>Beverages</h1>
-    <div class="beverage-layout">
-        <section class="beverage-column" id="non-alcoholic">
-            <h2 class="section-title">Non-Alcoholic</h2>
-            <div class="menu-item">
-                <h3>Water (small)</h3>
-                <p>Price: $0.65</p>
-            </div>
-            <div class="menu-item">
-                <h3>Water (big)</h3>
-                <p>Price: $1.25</p>
-            </div>
-            <div class="menu-item">
-                <h3>Sparkling Water</h3>
-                <p>Price: $2</p>
-            </div>
-            <div class="menu-item">
-                <h3>Ice Tea</h3>
-                <p>Price: $1</p>
-            </div>
-            <div class="menu-item">
-                <h3>Juice</h3>
-                <p>Price: $0.50</p>
-            </div>
-            <div class="menu-item">
-                <h3>Soft Drinks</h3>
-                <p>Price: $1</p>
-            </div>
-            <div class="menu-item">
-                <h3>Ahwe fenjen</h3>
-                <p>Price: $0.50</p>
-            </div>
-            <div class="menu-item">
-                <h3>Nescafe</h3>
-                <p>Price: $1</p>
-            </div>
-            <div class="menu-item">
-                <h3>Tea</h3>
-                <p>Price: $1</p>
-            </div>
+    <header class="header">
+        <div class="header-top">
+            <h1 class="logo"><a href="../index.html">Kimo's Garden</a></h1>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="navbar" id="navbar" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../HTML/Menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="../HTML/About.html" class="nav-link">About</a></li>
+                <li><a href="../HTML/Contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="category-header">
+            <a href="../HTML/Menu.html" class="back-link">&larr; Back to Menu</a>
+            <h2>Beverages</h2>
+            <p class="category-description">Refreshing drinks to quench your thirst</p>
         </section>
 
-        <section class="beverage-column" id="alcoholic">
-            <h2 class="section-title">Alcoholic</h2>
-            <div class="menu-item">
-                <h3>Beer (Almaza)</h3>
-                <p>Served with nuts &amp; carrots</p>
-                <p>Price: $4</p>
-            </div>
-            <div class="menu-item">
-                <h3>Mexican Beer</h3>
-                <p>Served with nuts &amp; carrots</p>
-                <p>Price: $4.50</p>
-            </div>
-            <div class="menu-item">
-                <h3>Vodka (glass or bottle)</h3>
-            </div>
-            <div class="menu-item">
-                <h3>Whiskey (glass or bottle)</h3>
-            </div>
-            <div class="menu-item">
-                <h3>Wine (glass or bottle)</h3>
-            </div>
-            <div class="menu-item">
-                <h3>Gin (glass or bottle)</h3>
-            </div>
-            <div class="menu-item">
-                <h3>Arak (glass or bottle)</h3>
-            </div>
-            <p class="column-note">Ask for the available brands and prices</p>
+        <section id="menu-container" class="menu-grid">
+            <article class="menu-item">
+                <h3>Soft Drinks</h3>
+                <p>Selection of cold sodas and juices. Small, Medium, Large.</p>
+                <p class="price">$2 - $4</p>
+            </article>
+            <article class="menu-item">
+                <h3>Iced Tea</h3>
+                <p>Refreshing iced tea with lemon. Freshly brewed daily.</p>
+                <p class="price">$3</p>
+            </article>
+            <article class="menu-item">
+                <h3>Fresh Lemonade</h3>
+                <p>Homemade lemonade with fresh lemons and a hint of mint.</p>
+                <p class="price">$4</p>
+            </article>
+            <article class="menu-item">
+                <h3>Smoothies</h3>
+                <p>Fresh fruit smoothies available in various flavors.</p>
+                <p class="price">$5</p>
+            </article>
         </section>
-    </div>
-    <a href="https://wa.me/961XXXXXXXX" class="whatsapp-float" target="_blank">
-            <img src="../Media/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+    </main>
+
+    <a href="https://wa.me/96171804331?text=Hello%2C%20please%20I%20would%20like%20to%20order." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Order via WhatsApp"
+       aria-label="Order via WhatsApp">
+        <img src="../Media/whatsapp-icon.png" alt="WhatsApp icon">
     </a>
+
+    <script src="../JS/NavigationScript.js"></script>
 </body>
 </html>

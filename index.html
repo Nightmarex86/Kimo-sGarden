@@ -3,29 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Kimo's Garden</title>
-    <link rel="icon" type="image/png" href="../Media/Kimo'sGarden-Logo.png">
+    <title>Home - Kimo's Garden Restaurant</title>
+    <link rel="icon" type="image/png" href="./Media/Kimo'sGarden-Logo.png">
     <link rel="stylesheet" href="./CSS/StyleHome.css">
 </head>
 <body>
-    <div id="main-content">
-        <div id="intro-container">
-            <aside class="sidebar">
-                <h2>Kimo’s Garden</h2>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="./HTML/Menu.html">Menu</a></li>
-                    <li><a href="./HTML/About.html">About</a></li>
-                    <li><a href="./HTML/Contact.html">Contact</a></li>
-                </ul>
-            </aside>
-            <h1>Welcome to Kimo’s Garden Restaurant</h1>
-            <h2>Where nature meets flavor</h2>
+    <header class="header">
+        <div class="header-top">
+            <h1 class="logo"><a href="index.html">Kimo's Garden</a></h1>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <a href="https://wa.me/96171804331?text=Hello%2C%20please%20I%20would%20like%20to%20order." class="whatsapp-float" target="_blank">
-            <img src="./Media/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
-        </a>
-    </div>
+        <nav class="navbar" id="navbar" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="./HTML/Menu.html" class="nav-link">Menu</a></li>
+                <li><a href="./HTML/About.html" class="nav-link">About</a></li>
+                <li><a href="./HTML/Contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="intro-container" role="banner">
+            <h2>Welcome to Kimo's Garden Restaurant</h2>
+            <p class="tagline">Where nature meets flavor</p>
+        </section>
+    </main>
+
+    <a href="https://wa.me/96171804331?text=Hello%2C%20please%20I%20would%20like%20to%20order." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Order via WhatsApp"
+       aria-label="Order via WhatsApp">
+        <img src="./Media/whatsapp-icon.png" alt="WhatsApp icon">
+    </a>
+
+    <script src="./JS/NavigationScript.js"></script>
     <script src="./JS/HomeScript.js"></script>
 </body>
 </html>

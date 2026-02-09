@@ -3,29 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deserts</title>
-    <link rel="icon" type="image/x-icon" href="../Media/Kimo'sGarden-Logo.png">
+    <title>Desserts - Kimo's Garden Restaurant</title>
+    <link rel="icon" type="image/png" href="../Media/Kimo'sGarden-Logo.png">
     <link rel="stylesheet" href="../CSS/StyleDesserts.css">
 </head>
 <body>
-    <a href="../HTML/Menu.html" class="back-button">← Back to Menu</a>
-    <h1>Deserts</h1>
-    <div id="Menu-container">
-        <div class="menu-item">
-            <h3>Nutella Rolls</h3>
-            <p>Price: $3</p>
+    <header class="header">
+        <div class="header-top">
+            <h1 class="logo"><a href="../index.html">Kimo's Garden</a></h1>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="menu-item">
-            <h3>Choco Cheese Rolls</h3>
-            <p>Price: $4</p>
-        </div>
-        <div class="menu-item">
-            <h3>Chocoba</h3>
-            <p>Price: $4</p>
-        </div>
-    </div>
-    <a href="https://wa.me/961XXXXXXXX" class="whatsapp-float" target="_blank">
-            <img src="../Media/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+        <nav class="navbar" id="navbar" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../HTML/Menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="../HTML/About.html" class="nav-link">About</a></li>
+                <li><a href="../HTML/Contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="category-header">
+            <a href="../HTML/Menu.html" class="back-link">&larr; Back to Menu</a>
+            <h2>Desserts</h2>
+            <p class="category-description">Sweet treats to end your meal perfectly</p>
+        </section>
+
+        <section id="menu-container" class="menu-grid">
+            <article class="menu-item">
+                <h3>Chocolate Cake</h3>
+                <p>Rich, moist chocolate cake with chocolate frosting.</p>
+                <p class="price">$5</p>
+            </article>
+            <article class="menu-item">
+                <h3>Cheesecake</h3>
+                <p>Creamy New York style cheesecake with berry topping.</p>
+                <p class="price">$6</p>
+            </article>
+            <article class="menu-item">
+                <h3>Brownies</h3>
+                <p>Fudgy brownies topped with powdered sugar.</p>
+                <p class="price">$4</p>
+            </article>
+            <article class="menu-item">
+                <h3>Ice Cream</h3>
+                <p>Selection of premium ice cream flavors.</p>
+                <p class="price">$4</p>
+            </article>
+        </section>
+    </main>
+
+    <a href="https://wa.me/96171804331?text=Hello%2C%20please%20I%20would%20like%20to%20order." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Order via WhatsApp"
+       aria-label="Order via WhatsApp">
+        <img src="../Media/whatsapp-icon.png" alt="WhatsApp icon">
     </a>
+
+    <script src="../JS/NavigationScript.js"></script>
 </body>
 </html>

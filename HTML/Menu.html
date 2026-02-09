@@ -3,83 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Menu - Kimo's Garden Restaurant</title>
     <link rel="icon" type="image/png" href="../Media/Kimo'sGarden-Logo.png">
     <link rel="stylesheet" href="../CSS/StyleMenu.css">
 </head>
 <body>
-    <aside class="sidebar">
-        <h2>Kimo’s Garden</h2>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../HTML/Menu.html">Menu</a></li>
-            <li><a href="../HTML/About.html">About</a></li>
-            <li><a href="../HTML/Contact.html">Contact</a></li>
-        </ul>
-    </aside>
-    <div id="Menu-container">
-        <h2>Our Menu Categories</h2>
-        <div class="menu-item">
-            <h3>Appetizers</h3> 
-            <p>Delicious starters to kick off your meal.</p>
-            <button class="menu-button" onclick="location.href='../HTML/Appetizers.html'">View More</button>
+    <header class="header">
+        <div class="header-top">
+            <h1 class="logo"><a href="../index.html">Kimo's Garden</a></h1>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="menu-item">
-            <h3>Burgers</h3> 
-            <p>Juicy burgers made with the freshest ingredients.</p>
-            <button class="menu-button" onclick="location.href='../HTML/Burgers.html'">View More</button>
-        </div>
-        <div class="menu-item">
-            <h3>Salads</h3> 
-            <p>Fresh and healthy salads to complement your meal.</p>
-            <button class="menu-button" onclick="location.href='../HTML/Salads.html'">View More</button>
-        </div>
-        <div class="menu-item">
-            <h3>Sandwiches</h3> 
-            <p>Hearty sandwiches made with artisanal bread.</p>
-            <button class="menu-button" onclick="location.href='../HTML/Sandwiches.html'">View More</button>
-        </div>
-        <div class="menu-item">
-            <h3>Wraps</h3> 
-            <p>Flavorful wraps filled with fresh ingredients.</p>
-            <button class="menu-button" onclick="location.href='../HTML/Wraps.html'">View More</button>
-        </div>
-        <div class="menu-item">
-            <h3>Platters</h3> 
-            <p>Assorted platters perfect for sharing.</p>
-            <button class="menu-button" onclick="location.href='../HTML/Platters.html'">View More</button>
-        </div>
-        
-        <div class="menu-item">
-            <h3>Desserts</h3>
-            <p>Indulge in our sweet treats to end your meal.</p>
-            <button class="menu-button" onclick="location.href='../HTML/Desserts.html'">View More</button>
-        </div>
-        <div class="menu-item">
-            <h3>beverages</h3> 
-            <p>Refreshing beverages to complement your meal.</p>
-            <button class="menu-button" onclick="location.href='../HTML/Beverages.html'">View More</button>
-        </div>
-        <div class="menu-item">
-            <h3>Extras</h3>
-            <p>Additional items to complement your meal.</p>
-            <button class="menu-button" onclick="location.href='../HTML/Extras.html'">View More</button>
-        </div>
-    </div>
-    <a href="https://wa.me/96171804331?text=Hello%2C%20please%20I%20would%20like%20to%20order." class="whatsapp-float" target="_blank">
-            <img src="../Media/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+        <nav class="navbar" id="navbar" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../HTML/Menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="../HTML/About.html" class="nav-link">About</a></li>
+                <li><a href="../HTML/Contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="menu-container">
+            <h2>Our Menu</h2>
+            <p class="subtitle">Browse our delicious menu categories</p>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Appetizers</h3>
+                    <p>Delicious starters to kick off your meal.</p>
+                    <a href="../HTML/Appetizers.html" class="menu-button">View More</a>
+                </div>
+                <div class="menu-item">
+                    <h3>Burgers</h3>
+                    <p>Juicy burgers made with the freshest ingredients.</p>
+                    <a href="../HTML/Burgers.html" class="menu-button">View More</a>
+                </div>
+                <div class="menu-item">
+                    <h3>Salads</h3>
+                    <p>Fresh and healthy salads to complement your meal.</p>
+                    <a href="../HTML/Salads.html" class="menu-button">View More</a>
+                </div>
+                <div class="menu-item">
+                    <h3>Sandwiches</h3>
+                    <p>Hearty sandwiches made with artisanal bread.</p>
+                    <a href="../HTML/Sandwiches.html" class="menu-button">View More</a>
+                </div>
+                <div class="menu-item">
+                    <h3>Wraps</h3>
+                    <p>Flavorful wraps filled with fresh ingredients.</p>
+                    <a href="../HTML/Wraps.html" class="menu-button">View More</a>
+                </div>
+                <div class="menu-item">
+                    <h3>Platters</h3>
+                    <p>Assorted platters perfect for sharing.</p>
+                    <a href="../HTML/Platters.html" class="menu-button">View More</a>
+                </div>
+                <div class="menu-item">
+                    <h3>Beverages</h3>
+                    <p>Refreshing drinks to quench your thirst.</p>
+                    <a href="../HTML/Beverages.html" class="menu-button">View More</a>
+                </div>
+                <div class="menu-item">
+                    <h3>Desserts</h3>
+                    <p>Sweet treats to end your meal perfectly.</p>
+                    <a href="../HTML/Desserts.html" class="menu-button">View More</a>
+                </div>
+                <div class="menu-item">
+                    <h3>Extras</h3>
+                    <p>Additional sides and extras to customize your order.</p>
+                    <a href="../HTML/Extras.html" class="menu-button">View More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/96171804331?text=Hello%2C%20please%20I%20would%20like%20to%20order." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Order via WhatsApp"
+       aria-label="Order via WhatsApp">
+        <img src="../Media/whatsapp-icon.png" alt="WhatsApp icon">
     </a>
-    <script>
-        document.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', e => {
-            if (link.href.includes('#') || link.target === '_blank') return;
-            e.preventDefault();
-            document.body.classList.add('fade-out');
-            setTimeout(() => {
-            window.location = link.href;
-            }, 400);
-        });
-        });
-    </script>
+
+    <script src="../JS/NavigationScript.js"></script>
 </body>
 </html>

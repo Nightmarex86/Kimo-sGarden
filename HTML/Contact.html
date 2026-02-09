@@ -3,50 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact - Kimo's Garden Restaurant</title>
     <link rel="icon" type="image/png" href="../Media/Kimo'sGarden-Logo.png">
     <link rel="stylesheet" href="../CSS/StyleContact.css">
 </head>
 <body>
-    <aside class="sidebar">
-        <h2>Kimo’s Garden</h2>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../HTML/Menu.html">Menu</a></li>
-            <li><a href="../HTML/About.html">About</a></li>
-            <li><a href="../HTML/Contact.html">Contact</a></li>
-        </ul>
-    </aside>
-    <div class="contact-info">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or inquiries, feel free to reach out to us!</p>
-        <p>We would love to hear from you!</p>
-        <p>contact us at: 📞 <a href="tel:+96171804331">+961 71 804 331</a> or by clicking the whatsapp logo below:</p>
-        <p>Email us at: 📧 <a href="mailto:Zeina_bj_98@hotmail.co.uk">Zeina_bj_98@hotmail.co.uk</a></p>
-        <p>Location:</p>
-        <div class="map-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.856564464946!2d35.59240007573916!3d33.81601443016687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f2327fb2f0be3%3A0x9938f182b4536acc!2sKimo&#39;s%20Garden!5e0!3m2!1sen!2slb!4v1761925373747!5m2!1sen!2slb"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+    <header class="header">
+        <div class="header-top">
+            <h1 class="logo"><a href="../index.html">Kimo's Garden</a></h1>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </div>
-    <a href="https://wa.me/96171804331?text=Hello%2C%20please%20I%20would%20like%20to%20order." class="whatsapp-float" target="_blank">
-            <img src="../Media/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+        <nav class="navbar" id="navbar" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../HTML/Menu.html" class="nav-link">Menu</a></li>
+                <li><a href="../HTML/About.html" class="nav-link">About</a></li>
+                <li><a href="../HTML/Contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <article class="contact-info">
+            <h2>Contact Us</h2>
+            <section class="contact-section">
+                <p>If you have any questions or inquiries, feel free to reach out to us!</p>
+                <p>We would love to hear from you!</p>
+            </section>
+
+            <section class="contact-details">
+                <h3>Get in Touch</h3>
+                <p>
+                    📞 <a href="tel:+96171804331">+961 71 804 331</a>
+                </p>
+                <p>
+                    📧 <a href="mailto:Zeina_bj_98@hotmail.co.uk">Zeina_bj_98@hotmail.co.uk</a>
+                </p>
+                <p>Or click the WhatsApp logo below to order directly!</p>
+            </section>
+
+            <section class="location-section">
+                <h3>Visit Us</h3>
+                <p>Kimo's Garden is located in the heart of Kahale. Check our map below:</p>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.856564464946!2d35.59240007573916!3d33.81601443016687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f2327fb2f0be3%3A0x9938f182b4536acc!2sKimo&#39;s%20Garden!5e0!3m2!1sen!2slb!4v1761925373747!5m2!1sen!2slb"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Kimo's Garden Location Map">
+                    </iframe>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <a href="https://wa.me/96171804331?text=Hello%2C%20please%20I%20would%20like%20to%20order." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Order via WhatsApp"
+       aria-label="Order via WhatsApp">
+        <img src="../Media/whatsapp-icon.png" alt="WhatsApp icon">
     </a>
-    <script>
-        document.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', e => {
-            if (link.href.includes('#') || link.target === '_blank') return;
-            e.preventDefault();
-            document.body.classList.add('fade-out');
-            setTimeout(() => {
-            window.location = link.href;
-            }, 400);
-        });
-        });
-    </script>
+
+    <script src="../JS/NavigationScript.js"></script>
 </body>
 </html>

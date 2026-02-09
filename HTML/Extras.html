@@ -3,55 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extras</title>
-    <link rel="icon" type="image/x-icon" href="../Media/Kimo'sGarden-Logo.png">
+    <title>Extras - Kimo's Garden Restaurant</title>
+    <link rel="icon" type="image/png" href="../Media/Kimo'sGarden-Logo.png">
     <link rel="stylesheet" href="../CSS/StyleExtras.css">
 </head>
 <body>
-    <a href="../HTML/Menu.html" class="back-button">← Back to Menu</a>
-    <h1>Extras</h1>
-    
-    <!-- Three-column extras section: Ads | Nuts & Carrots | Narguile -->
-    <section class="extras-grid">
-        <article class="extra-card" id="ads">
-            <h2>Adds-on</h2>
-            <p>Enhance your meal with these delicious add-ons:</p>
-            <ul>
-                <li>Mozzarella cheese <strong>Price: $0.50</strong></li>
-                <li>Cheddar cup <strong>Price: $1</strong></li>
-                <li>BBQ sauce <strong>Price: $0.30</strong></li>
-                <li>Mayo cup <strong>Price: $0.30</strong></li>
-                <li>Cocktail sauce <strong>Price: $0.30</strong></li>
-                <li>Garlic sauce <strong>Price: $0.30</strong></li>
-                <li>Beef patty <strong>Price: $2</strong></li>
-                <li>Fried or grilled chicken <strong>Price: $1</strong></li>
-                <li>Mozzarella patty <strong>Price: $1.50</strong></li>
+    <header class="header">
+        <div class="header-top">
+            <h1 class="logo"><a href="../index.html">Kimo's Garden</a></h1>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="navbar" id="navbar" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../HTML/Menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="../HTML/About.html" class="nav-link">About</a></li>
+                <li><a href="../HTML/Contact.html" class="nav-link">Contact</a></li>
             </ul>
-            
-        </article>
+        </nav>
+    </header>
 
-        <article class="extra-card" id="nuts-carrots">
-            <h2>Nuts &amp; Carrots</h2>
-            <p>Fresh roasted nuts and carrot sticks — great healthy snacks to pair with your order.</p>
-            <ul>
-                <li>Mixed Nuts <strong>Price: $2</strong></li>
-                <li>Carrot Sticks <strong>Price: $2</strong></li>
-            </ul>
-        </article>
+    <main id="main-content">
+        <section class="category-header">
+            <a href="../HTML/Menu.html" class="back-link">&larr; Back to Menu</a>
+            <h2>Extras</h2>
+            <p class="category-description">Additional sides and extras to customize your order</p>
+        </section>
 
-        <article class="extra-card" id="narguile">
-            <h2>Arguile</h2>
-            <ul>
-                <li>Hookah <strong>Price: $5</strong></li>
-                <li>Extra rass <strong>Price: $1</strong></li>
-            </ul>
-            
-            <p>Premium arguile/hookah flavors available — ask our staff for recommendations.</p>
-            <p class="small">Available for dine-in only. Must be 18+ where required.</p>
-        </article>
-    </section>
-    <a href="https://wa.me/961XXXXXXXX" class="whatsapp-float" target="_blank">
-            <img src="../Media/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+        <section id="menu-container" class="menu-grid">
+            <article class="menu-item">
+                <h3>Extra Sauce</h3>
+                <p>Choice of house sauce, BBQ, ranch, or spicy mayo.</p>
+                <p class="price">$0.50</p>
+            </article>
+            <article class="menu-item">
+                <h3>Cheese</h3>
+                <p>Additional cheese slice (cheddar, mozzarella, or Swiss).</p>
+                <p class="price">$0.75</p>
+            </article>
+            <article class="menu-item">
+                <h3>Bacon Strips</h3>
+                <p>Crispy bacon strips to add to any meal.</p>
+                <p class="price">$2</p>
+            </article>
+            <article class="menu-item">
+                <h3>Avocado</h3>
+                <p>Fresh sliced avocado.</p>
+                <p class="price">$1.50</p>
+            </article>
+            <article class="menu-item">
+                <h3>Extra Vegetables</h3>
+                <p>Lettuce, tomato, onion, pickles, or peppers.</p>
+                <p class="price">$0.50</p>
+            </article>
+        </section>
+    </main>
+
+    <a href="https://wa.me/96171804331?text=Hello%2C%20please%20I%20would%20like%20to%20order." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Order via WhatsApp"
+       aria-label="Order via WhatsApp">
+        <img src="../Media/whatsapp-icon.png" alt="WhatsApp icon">
     </a>
+
+    <script src="../JS/NavigationScript.js"></script>
 </body>
 </html>

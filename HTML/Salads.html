@@ -3,44 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salads</title>
+    <title>Salads - Kimo's Garden Restaurant</title>
     <link rel="icon" type="image/png" href="../Media/Kimo'sGarden-Logo.png">
     <link rel="stylesheet" href="../CSS/StyleSalads.css">
 </head>
 <body>
-    <a href="../HTML/Menu.html" class="back-button">← Back to Menu</a>
-    <h1>Salads</h1>
-    <div id="Menu-container">
-        <div class="menu-item">
-            <h2>Chicken Caesar Salad</h2>
-            <p>Iceberg, grilled chicken, cucumber, parmesan cheese, croutons, and mayo dressing</p>
-            <p>Price: $8</p>
+    <header class="header">
+        <div class="header-top">
+            <h1 class="logo"><a href="../index.html">Kimo's Garden</a></h1>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="menu-item">
-            <h2>Crab Salad</h2>
-            <p>Crab, iceberg, corn, carrots, tomato cerise, cucumber, mustard dressing</p>
-            <p>Price: $8</p>
-        </div>
-        <div class="menu-item">
-            <h2>Fatoush Salad</h2>
-            <p>A colorful salad with mixed greens, tomatoes, cucumbers, radishes, and a tangy sumac dressing.</p>
-            <p>Price: $7</p>
-        </div>
-    </div>
-    <a href="https://wa.me/961XXXXXXXX" class="whatsapp-float" target="_blank">
-            <img src="../Media/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+        <nav class="navbar" id="navbar" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../HTML/Menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="../HTML/About.html" class="nav-link">About</a></li>
+                <li><a href="../HTML/Contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="category-header">
+            <a href="../HTML/Menu.html" class="back-link">&larr; Back to Menu</a>
+            <h2>Salads</h2>
+            <p class="category-description">Fresh and healthy salads to complement your meal</p>
+        </section>
+
+        <section id="menu-container" class="menu-grid">
+            <article class="menu-item">
+                <h3>Garden Salad</h3>
+                <p>Mixed greens with fresh vegetables and house dressing.</p>
+                <p class="price">$7</p>
+            </article>
+            <article class="menu-item">
+                <h3>Caesar Salad</h3>
+                <p>Crisp romaine lettuce, parmesan, croutons, and creamy Caesar dressing.</p>
+                <p class="price">$8</p>
+            </article>
+            <article class="menu-item">
+                <h3>Grilled Chicken Salad</h3>
+                <p>Garden greens topped with grilled chicken breast and seasonal vegetables.</p>
+                <p class="price">$10</p>
+            </article>
+        </section>
+    </main>
+
+    <a href="https://wa.me/96171804331?text=Hello%2C%20please%20I%20would%20like%20to%20order." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Order via WhatsApp"
+       aria-label="Order via WhatsApp">
+        <img src="../Media/whatsapp-icon.png" alt="WhatsApp icon">
     </a>
-    <script>
-        document.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', e => {
-            if (link.href.includes('#') || link.target === '_blank') return;
-            e.preventDefault();
-            document.body.classList.add('fade-out');
-            setTimeout(() => {
-            window.location = link.href;
-            }, 400);
-        });
-        });
-    </script>
+
+    <script src="../JS/NavigationScript.js"></script>
 </body>
 </html>
